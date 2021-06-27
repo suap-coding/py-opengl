@@ -65,12 +65,13 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                quit()        
+        glRotatef(1, 3, 1, 1)
+                
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)    # clear the previous frame
                                                             # we clear 'color buffer' and 'depth buffer'?
         Cube()
         pygame.display.flip()   # it's a way to update; we don't know why .flip() instead of .update()
-        pygame.time.wait(10)
-        
+        pygame.time.wait(1)
+
 main()
-        
